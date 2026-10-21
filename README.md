@@ -5,11 +5,11 @@ de atención sanitaria durante emergencias por desastres naturales.
 Curso: Fundamentos de Programación (CIIN1205P) - UPN.
 
 ## Integrantes
--Marlon Anthony Bravo
--Jose Carlos Altamirano Chircca
--Gian Luka Julder Criollo Jeronimo
--Bryan Roberto Tupac Huaman
--Piero Alexander Untiveros Rodas
+- Marlon Anthony Bravo
+- Jose Carlos Altamirano Chircca
+- Gian Luka Julder Criollo Jeronimo
+- Bryan Roberto Tupac Huaman
+- Piero Alexander Untiveros Rodas
 
 ## Módulos
 - `main.py`: menú principal y registro de datos.
