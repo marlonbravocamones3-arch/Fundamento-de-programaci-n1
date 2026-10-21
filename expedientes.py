@@ -26,3 +26,28 @@ def registrar_expediente(codigo, nombre, dni, telefono, tipo, gravedad,
     prioridad.insert(pos, p)
     estado.insert(pos, "Pendiente")
     return cod
+
+
+def buscar_lineal(claves, buscado):
+    """Busqueda lineal: devuelve la posicion encontrada o -1 si no existe."""
+    for i in range(len(claves)):
+        if claves[i] == buscado:
+            return i
+    return -1
+
+
+def mostrar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado, i):
+    print("Codigo:", codigo[i], "| Solicitante:", nombre[i],
+          "| DNI:", dni[i], "| Tel:", telefono[i])
+    print("Solicitud:", tipo[i], "| Gravedad:", gravedad[i], "| Estado:", estado[i])
+
+
+def consultar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado):
+    buscado = input("Ingrese el codigo (EXP-xxxx) o el DNI: ").strip().upper()
+    pos = buscar_lineal(codigo, buscado)
+    if pos == -1:
+        pos = buscar_lineal(dni, buscado)
+    if pos == -1:
+        print("Expediente no encontrado.")
+    else:
+        mostrar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado, pos)

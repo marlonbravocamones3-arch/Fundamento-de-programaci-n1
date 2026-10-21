@@ -3,7 +3,7 @@
 codigo, nombre, dni, telefono = [], [], [], []
 tipo, gravedad, prioridad, estado = [], [], [], []
 from validaciones import dni_valido, gravedad_valida
-from expedientes import registrar_expediente
+from expedientes import registrar_expediente, consultar_expediente
 
 def mostrar_menu():
     print("\n===== MESA DE PARTES DIGITAL EN SALUD =====")
@@ -11,7 +11,7 @@ def mostrar_menu():
     print("2. Consultar expediente (por codigo o DNI)")
     print("3. Ver listado priorizado")
     print("4. Salir")
-    
+
 def pedir_y_registrar():
 
  v_nombre = input("Nombre completo: ").strip()
@@ -46,7 +46,7 @@ while opcion != 4:
     if opcion == 1:             
      pedir_y_registrar()
     elif opcion == 2:
-        print("Consulta en construccion")
+        consultar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado)
     elif opcion == 3:
         print("Listado en construccion")
     elif opcion == 4:
