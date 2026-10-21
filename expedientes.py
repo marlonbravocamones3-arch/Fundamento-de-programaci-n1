@@ -51,3 +51,14 @@ def consultar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado):
         print("Expediente no encontrado.")
     else:
         mostrar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado, pos)
+
+
+def listar_priorizado (codigo, nombre, dni, telefono, tipo, gravedad, estado):
+    """Muestra todos los expedientes (ya estan ordenados de mayor a menor urgencia)."""
+    if len(codigo) == 0:
+        print("No hay expedientes registrados.")
+        return
+    print("===== LISTADO PRIORIZADO (de mayor a menor urgencia) =====")
+    for i in range(len(codigo)):
+        print(str(i + 1) + ")")
+        mostrar_expediente(codigo, nombre, dni, telefono, tipo, gravedad, estado, i)
